@@ -1,0 +1,54 @@
+body {
+    font-size: 14px;
+    font-family: "Droid Sans", "Helvetica", "Ubuntu", Arial, Sans !important;
+}
+
+:focus, button.best-answer {
+    outline: 3px auto #EED216;
+}
+
+#choose-gene-name {
+    border-radius: 5px;
+}
+
+.imbedded-column-header {
+    font-size: 0.9em;
+}
+
+.imbedded-cell a {
+    font-size: 0.8em;
+}
+
+.imbedded-table-container {
+    width: 55em;
+}
+
+.imbedded-scroll-container {
+    clear: both;
+}
+
+.apology-placeholder {
+    width: 20em;
+    padding: 1em;
+    color: #888;
+    border: 2px solid #F6E993;
+}
+
+#choose-gene {
+    max-width: 75%;
+}
+
+button.gene-chooser {
+    margin: 0.2em;
+    width: 15em;
+    height: 3em;
+    float: left;
+}
+
+p.gene-summary {
+    border: 2px solid #888;
+    border-radius: 2px;
+    padding: 0.3em;
+    color: #333;
+    width: 30em;
+}

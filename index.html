@@ -1,0 +1,29 @@
+<html>
+    <head title="Static Demo">
+        <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+        <script type="text/javascript" src="http://www.intermine.org/lib/imbedding/0.2/imbedding.js"></script>
+        <script type="text/javascript" src="js/demo.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://www.intermine.org/lib/imbedding/0.2/style/dark.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/demo.css"/>
+    </head>
+    <body>
+        <label for="choose-gene-name">Choose Gene:</label>
+        <input type="text" id="choose-gene-name"/>
+        <div id="choose-gene"></div>
+        <div id="data" style="clear: both">
+            <h3>Data From D. Melanogaster</h3>
+            <div id="fly-genes"></div>
+            <div id="flymine-table">
+                <p class="apology-placeholder">No data loaded</p>
+            </div>
+            <div id="modmine-table">
+                <p class="apology-placeholder">No data loaded</p>
+            </div>
+            <h3>Data From H. sapiens</h3>
+            <div id="meta-genes"></div>
+            <div id="metabolicmine-table">
+                <p class="apology-placeholder">No data loaded</p>
+            </div>
+        </div>
+    </body>
+</html>
