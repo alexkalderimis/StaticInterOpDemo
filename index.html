@@ -1,28 +1,60 @@
 <html>
     <head title="Static Demo">
         <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
-        <script type="text/javascript" src="http://www.intermine.org/lib/imbedding/0.2/imbedding.js"></script>
+        <script type="text/javascript" src="js/imbedding.js"></script>
         <script type="text/javascript" src="js/demo.js"></script>
-        <link rel="stylesheet" type="text/css" href="http://www.intermine.org/lib/imbedding/0.2/style/dark.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/dark.min.css"/>
         <link rel="stylesheet" type="text/css" href="css/demo.css"/>
     </head>
     <body>
-        <label for="choose-gene-name">Choose Gene:</label>
-        <input type="text" id="choose-gene-name"/>
-        <div id="choose-gene"></div>
-        <div id="data" style="clear: both">
-            <h3>Data From D. Melanogaster</h3>
-            <div id="fly-genes"></div>
-            <div id="flymine-table">
-                <p class="apology-placeholder">No data loaded</p>
-            </div>
-            <div id="modmine-table">
-                <p class="apology-placeholder">No data loaded</p>
-            </div>
-            <h3>Data From H. sapiens</h3>
-            <div id="meta-genes"></div>
-            <div id="metabolicmine-table">
-                <p class="apology-placeholder">No data loaded</p>
+        <h1>InterMine JavaScript Demo</h1>
+        <p class="guff">
+            This page demonstrates the use of javascript to fetch, parse and 
+            display data served from InterMine webservers. All data here is 
+            fetched using JavaScript ajax requests, and is displayed onto the 
+            page using a custom written paging table library. 
+        </p>
+        <div id="page">
+            <label for="choose-gene-name">Find a Gene:</label>
+            <input type="text" id="choose-gene-name"/>
+            in <select id="organism-name">
+                <option value="D. melanogaster">Fly</option>
+                <option value="H. sapiens">Human</option>
+                <option value="R. norvegicus">Rat</option>
+            </select>
+            <input type="submit" id="submit-gene-name" value="Search"/>
+            <div id="choose-gene"></div>
+            <div id="data" style="clear: both">
+                <div id="fly-data">
+                    <img class="logo" src="http://www.flymine.org/query/model/images/logo.png"/>
+                    <h3>Data From FlyMine</h3>
+                    <p>Fly Homologues:</p>
+                    <div id="fly-genes" class="gene-labels"></div>
+                    <div id="flymine-go-table" class="flymine-table">
+                        <p class="apology-placeholder">FlyMine GO data</p>
+                    </div>
+                    <div id="flymine-pw-table" class="flymine-table">
+                        <p class="apology-placeholder">FlyMine Pathways data</p>
+                    </div>
+                </div>
+                <div id="rat-data">
+                    <img class="logo" src="http://ratmine.mcw.edu/ratmine/model/images/logo.png"/>
+                    <h3>Data from RatMine</h3>
+                    <p>Rat Homologues:</p>
+                    <div id="rat-genes" class="gene-labels"></div>
+                    <div id="ratmine-table">
+                        <p class="apology-placeholder">RatMine disease data</p>
+                    </div>
+                </div>
+                <div id="rat-data">
+                    <img class="logo" src="http://www.metabolicmine.org/beta/model/images/logo.png"/>
+                    <h3>Data From metabolicMine</h3>
+                    <p>Human Homologues:</p>
+                    <div id="meta-genes" class="gene-labels"></div>
+                    <div id="metabolicmine-table">
+                        <p class="apology-placeholder">No data loaded</p>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
